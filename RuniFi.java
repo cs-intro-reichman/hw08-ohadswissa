@@ -1,4 +1,6 @@
 // Tests the PlayList and Track classes.
+//import Track;
+//import PlayList;
 class RuniFi {
     
     public static void main(String[] args) {
@@ -12,6 +14,9 @@ class RuniFi {
         Track track3 = new Track("Creep", "Radiohead", 369);
         Track track4 = new Track("Thriller", "Michael Jackson", 222);
         Track track5 = new Track("Yesterday", "The Beatles", 125);
+        //int total = formattedDuration(track5.getDuration());
+        //System.out.println(track5.formattedDuration(track5.getDuration()));
+
       
         // Adds the tracks to the List
         System.out.println("Adding tracks...");
