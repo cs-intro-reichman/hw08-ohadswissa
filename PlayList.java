@@ -40,7 +40,9 @@ class PlayList {
             if (tracks[i] == null)
             {
                 tracks[i] = track;
-                return true;            }
+                size++;
+                return true;
+            }            
         }
         
             return false;
@@ -55,8 +57,9 @@ class PlayList {
        {
         s += tracks[i].toString()+"\n";
        }
-        return s;
-    }
+     return s;
+ }
+   
 
     /** Removes the last track from this list. If the list is empty, does nothing. */
      public void removeLast() {
@@ -132,7 +135,7 @@ class PlayList {
         }
         else 
         {
-            for (int j = i; j <= size; j++)
+            for (int j = i; j < size - 1; j++)
             {
                 tracks[j] = tracks[j+1];
             }
@@ -218,7 +221,8 @@ class PlayList {
     /** Returns the title of the shortest track in this list. 
      *  If the list is empty, returns null. */
     public String titleOfShortestTrack() {
-        return tracks[minIndex(0)].getTitle();
+        if (tracks[0] == null) return null;
+        else return tracks[minIndex(0)].getTitle();
     }
 
     /** Sorts this list by increasing duration order: Tracks with shorter
